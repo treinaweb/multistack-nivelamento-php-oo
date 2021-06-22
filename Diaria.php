@@ -1,6 +1,6 @@
 <?php
 
-class Atendimento
+abstract class Atendimento
 {
     public $data;
     private $tempo;
@@ -28,11 +28,5 @@ class Diaria extends Atendimento
 $d1 = new Diaria;
 $d1->definirValor(100.00);
 $d1->data = '01/10/2021';
-echo $d1->data;
 
-var_dump($d1);
-
-// $at1 = new Atendimento;
-// $at1->data = '01/10/2021';
-// $at1->definirTempo(0);
 
