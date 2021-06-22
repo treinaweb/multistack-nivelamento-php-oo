@@ -1,10 +1,27 @@
 <?php
 
-class Diarista 
+class Pessoa 
 {
     public $nome;
     public $telefone;
     public $endereco;
+
+    //....
+}
+
+class Cliente extends Pessoa
+{
+    public $saldo;
+
+    public function contratarDiarista($diarista)
+    {
+        # processo para contratar diarista
+    }
+}
+
+class Diarista extends Pessoa
+{
+    public $chavePix;
 
     /**
      * Atende ao cliente
