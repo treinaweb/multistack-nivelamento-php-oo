@@ -6,9 +6,29 @@ class Diarista
     public $telefone;
     public $endereco;
 
+    /**
+     * Atende ao cliente
+     *
+     * @param string $nomeCliente
+     * @return void
+     */
     public function atenderCliente($nomeCliente)
     {
-        echo "<br> O(A) diarista atendeu ao cliente $nomeCliente";
+        $nomeDiarista = $this->nome;
+        echo "<br> O(A) diarista $nomeDiarista atendeu ao cliente $nomeCliente. ";
+    }
+
+    /**
+     * Avalia cliente
+     *
+     * @param string $nomeCliente
+     * @param int $nota
+     * @return void
+     */
+    public function avaliarCliente($nomeCliente, $nota)
+    {
+        $this->atenderCliente($nomeCliente);
+        echo "Avaliou o cliente com a nota $nota";
     }
 }
 
@@ -16,7 +36,7 @@ $maria = new Diarista;
 $maria->nome = "Maria da Silva";
 $maria->telefone = "(11) 98777 7777";
 $maria->endereco = "Av Paulissta, 1220";
-$maria->atenderCliente('Elton');
+$maria->avaliarCliente('Elton', 5);
 
 var_dump($maria);
 
@@ -24,6 +44,6 @@ $joao = new Diarista;
 $joao->nome = "joao da Silva";
 $joao->telefone = "(11) 98777 1234";
 $joao->endereco = "Av Paulissta, 1233";
-$joao->atenderCliente('Luciane');
+$joao->avaliarCliente('Luciane', 4);
 
 var_dump($joao);
